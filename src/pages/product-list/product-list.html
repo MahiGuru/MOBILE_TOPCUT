@@ -1,0 +1,28 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons start>
+            <button ion-button icon-only color="royal">
+              <ion-icon name="search"></ion-icon>
+            </button>
+        </ion-buttons>
+        <ion-title>Product List</ion-title>
+        <ion-buttons end>
+            <button ion-button icon-only color="royal">
+              <ion-icon name="person-add"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding>
+    <ion-card class="full_bg" *ngFor="let product of listOfProducts" (click)="gotoDetailsPage(product)">
+        <div class="d-flex">
+            <carousel [images]="product.productImages"></carousel>
+            <div class="card-bg">
+                <div class="card-title show-ellipsis">{{product.title}}</div>
+                <div class="card-subtitle show-ellipsis">{{ product.desc }}</div>
+            </div>
+        </div>
+    </ion-card>
+</ion-content>

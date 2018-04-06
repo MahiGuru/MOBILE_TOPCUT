@@ -1,0 +1,5 @@
+<ion-slides *ngFor="let pImg of productImages">
+    <ion-slide *ngFor="let img of pImg.imgNames">
+        <img class="pimg" height="100" width="auto" src="http://139.59.78.151{{pImg.path.split('.')[1]}}/{{img}}" />
+    </ion-slide>
+</ion-slides>
